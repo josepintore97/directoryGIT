@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#define DIM 30
 
 struct Persona
 {
@@ -12,19 +13,20 @@ struct Persona leggie1();
 int main()
 {
     FILE *fp;
-    struct Persona e;
-    int fine = 0;
+    struct Persona e[DIM];
+    int fine = 0, i = 0;
 
     fp = fopen("people.dat", "wb");
 
     while (!fine)
     {
-        e = leggie1();
+        e[i] = leggie1();
 
-        fwrite(&e, sizeof(struct Persona), 1, fp);
+        fwrite(e, sizeof(struct Persona), DIM, fp);
 
         printf("\nFine (SI=1, NO=0)?  ");
         scanf("%d", &fine);
+        i++;
     }
 
     fclose(fp);
