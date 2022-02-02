@@ -1,0 +1,1 @@
+void ricopia(FILE *fp_out, char file_in[]);

@@ -1,0 +1,1 @@
+void mine_adiacenti(Casella c[Nrighe][Ncolonne]);

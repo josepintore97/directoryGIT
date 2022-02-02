@@ -1,0 +1,1 @@
+void inizializza_mine(Casella c[Nrighe][Ncolonne]);

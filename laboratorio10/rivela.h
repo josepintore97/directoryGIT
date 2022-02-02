@@ -1,0 +1,1 @@
+int rivela(int coordinata_numero, char coordinata_lettera, Casella c[][Ncolonne]);
