@@ -8,7 +8,7 @@ float rnd_float(float a, float b)
     return a + (b - a) * (float)rand() / RAND_MAX;
 }
 
-void inizializza_mine(Casella c[Nrighe][Ncolonne])
+void inizializza_mine(Casella c[Nrighe][Ncolonne], int *cont_mine)
 {
     int i, j;
 
@@ -20,6 +20,7 @@ void inizializza_mine(Casella c[Nrighe][Ncolonne])
             if (rnd_float(0.0, 1.0) < PROBmina)
             {
                 c[i][j].minata = -1;
+                ++*cont_mine;
             }
             else
             {
